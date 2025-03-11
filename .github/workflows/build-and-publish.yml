@@ -45,7 +45,7 @@ jobs:
 
     - name: Configure EKS
       run: |
-        aws eks update-kubeconfig --name test
+        aws eks update-kubeconfig --name tnogi
  
     - name: Deploy to EKS
       run: |
