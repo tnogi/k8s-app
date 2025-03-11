@@ -56,7 +56,7 @@ jobs:
       run: |
         aws eks update-kubeconfig --name tnogi
         aws sts get-caller-identity
-        less /home/runner/.kube/config
+        cat /home/runner/.kube/config
         eksctl create iamidentitymapping --cluster tnogi --region ap-northeast-1 --arn arn:aws:sts::209746572579:assumed-role/tnogi-admin/GitHubActions --group system:masters --username admin
         eksctl get iamidentitymapping --cluster tnogi --region=ap-northeast-1
         kubectl version
