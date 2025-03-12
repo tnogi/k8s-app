@@ -67,6 +67,6 @@ jobs:
       run: |
         mkdir ./tmp
         #sed -e 's/<IMAGE>/$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG/g' ./git-deployment.yml > ./tmp/git-deployment.yml
-        cat ./tmp/git-deployment.yml
-        kubectl apply -f ./tmp/git-deployment.yml
+        cat ./git-deployment.yml
+        kubectl apply -f ./git-deployment.yml
 
