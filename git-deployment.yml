@@ -23,3 +23,8 @@ spec:
             - containerPort: 80
               protocol: TCP
           imagePullPolicy: Always
+          env:
+            - name: MONGODB_URI
+              value: "mongodb://username:password@hostname:port"
+            - name: SECRET_KEY
+              value: "wizexercise.txt"
