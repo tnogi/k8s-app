@@ -63,5 +63,6 @@ jobs:
       run: |
         mkdir ./tmp
         sed -e 's/<IMAGE>/${{ secrets.ECR_REGISTRY }}\/${{ env.ECR_REPOSITORY }}:${{ github.sha }}/g' ./git-deployment.yml > ./tmp/git-deployment.yml
+        cat ./tmp/git-deployment.yml
         kubectl apply -f ./tmp/git-deployment.yml
 
