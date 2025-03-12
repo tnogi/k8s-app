@@ -25,6 +25,6 @@ spec:
           imagePullPolicy: Always
           env:
             - name: MONGODB_URI
-              value: "mongodb://username:password@hostname:port"
+              value: "mongodb://username:password@10.0.12.122:22"
             - name: SECRET_KEY
               value: "wizexercise.txt"
