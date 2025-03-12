@@ -28,3 +28,16 @@ spec:
               value: "mongodb://username:password@10.0.12.122:22"
             - name: SECRET_KEY
               value: "wizexercise.txt"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: octopus-underwater-app
+spec:
+  selector:
+    apl: octopus-underwater-app
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+  type: LoadBalancer
