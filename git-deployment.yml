@@ -41,16 +41,6 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip 
 spec:
   rules:
-  - host: alb.hostname.mydomain.com
-    http:
-      paths:
-      - backend:
-          service:
-            name: hostname-svc
-            port:
-              number: 80
-        path: /
-        pathType: Prefix
    - host: alb.apache.mydomain.com
      http:
        - backend:
