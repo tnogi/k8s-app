@@ -28,3 +28,19 @@ spec:
               value: "mongodb://mongo:password@192.168.0.241:27017"
             - name: SECRET_KEY
               value: "wizexercise.txt"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-nlb
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: app
+  selector:
+    app: octopus-underwater-app
