@@ -22,8 +22,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        role-to-assume: 'arn:aws:iam::209746572579:role/tnogi-admin'
-        aws-region: ap-northeast-1
+        role-to-assume: 'arn:aws:iam::207567801874:role/tnogi-admin'
+        aws-region: us-east-1
 
     - name: Login to Amazon ECR
       id: login-ecr
