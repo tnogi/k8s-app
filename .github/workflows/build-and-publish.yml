@@ -56,7 +56,7 @@ jobs:
       run: |
         aws eks update-kubeconfig --name k8s-app
         aws sts get-caller-identity
-        eksctl get iamidentitymapping --cluster k8s-app --region=ap-northeast-1
+        eksctl get iamidentitymapping --cluster k8s-app --region=us-east-1
         kubectl version
  
     - name: Deploy to EKS
