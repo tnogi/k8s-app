@@ -18,14 +18,14 @@ spec:
     spec:
       containers:
         - name: octopus-underwater-app
-          image: 207567801874.dkr.ecr.us-east-1.amazonaws.com/octopus-underwater-app:latest
+          image: ***
           ports:
             - containerPort: 8080
               protocol: TCP
           imagePullPolicy: Always
           env:
             - name: MONGODB_URI
-              value: "mongodb://mongo:password@192.168.0.66:27017"
+              value: "mongodb://mongo:password@***:27017"
             - name: SECRET_KEY
               value: "wizexercise.txt"
 ---
